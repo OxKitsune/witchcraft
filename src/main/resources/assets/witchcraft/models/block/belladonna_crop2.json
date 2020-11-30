@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "witchcraft:block/belladonna_crop2"
+  }
+}

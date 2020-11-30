@@ -1,0 +1,54 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "witchcraft:block/magic_circle",
+		"particle": "witchcraft:block/magic_circle"
+	},
+	"elements": [
+		{
+			"from": [0, 0.1, 0],
+			"to": [16, 0.2, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0.2], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 0.2], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 0.2], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 0.2], "texture": "#0"},
+				"up": {"uv": [4, 0, 8, 4], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [12, 0, 8, 4], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 3.25, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"rotation": [26, 16, 57],
+			"translation": [-4.75, 4.25, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 10, 47],
+			"translation": [-2, 8, 0]
+		},
+		"ground": {
+			"translation": [0, 8.25, 0]
+		},
+		"gui": {
+			"rotation": [90, 0, 0],
+			"translation": [0.25, -0.25, 0.25]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, -8.75]
+		}
+	},
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 8, 8],
+			"children": [0]
+		}
+	]
+}
