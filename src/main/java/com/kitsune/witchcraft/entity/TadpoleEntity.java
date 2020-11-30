@@ -2,15 +2,12 @@ package com.kitsune.witchcraft.entity;
 
 import com.kitsune.witchcraft.setup.WitchcraftItems;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.entity.passive.fish.AbstractFishEntity;
 import net.minecraft.entity.passive.fish.AbstractGroupFishEntity;
-import net.minecraft.entity.passive.fish.SalmonEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
@@ -26,15 +23,19 @@ public class TadpoleEntity extends AbstractGroupFishEntity {
     // func_234176_m_() --> registerAttributes()
     // This is the first reference I found while trying to find one in the superclasses
     // I've also tried MobEntity, but that doesn't work.
-    public static AttributeModifierMap.MutableAttribute setCustomAttributes () {
-        return AbstractFishEntity.func_234176_m_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 2.5D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D);
+    public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
+        return MobEntity.func_233666_p_()
+                .createMutableAttribute(Attributes.MAX_HEALTH, 2.5D);
     }
 
     @Override
     public int getMaxGroupSize() {
-        return 5;
+        return 12;
+    }
+
+    @Override
+    protected int getExperiencePoints(PlayerEntity player) {
+        return 0;
     }
 
     @Override

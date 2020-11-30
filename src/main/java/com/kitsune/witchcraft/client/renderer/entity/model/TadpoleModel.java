@@ -7,6 +7,7 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.command.impl.SummonCommand;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,13 +25,13 @@ public class TadpoleModel<T extends Entity> extends SegmentedModel<T>  {
         textureHeight = 32;
 
         body = new ModelRenderer(this);
-        body.setRotationPoint(0.0F, 24.0F, 0.0F);
-        body.setTextureOffset(0, 7).addBox(-2.0F, -3.0F, -6.0F, 4.0F, 3.0F, 5.0F, 0.0F, false);
+        body.setRotationPoint(0.0F, 23.0F, 6.0F);
+        body.setTextureOffset(0, 7).addBox(-2.0F, -2.0F, -2.5F, 4.0F, 3.0F, 5.0F, 0.0F, false);
 
         tail = new ModelRenderer(this);
-        tail.setRotationPoint(0.0F, 24.0F, -1.0F);
+        tail.setRotationPoint(0.0F, 24.0F, 8.0F);
         setRotationAngle(tail, 0.0F, 0.0F, 1.5708F);
-        tail.setTextureOffset(0, 0).addBox(-4.0F, 0.0F, 0.0F, 5.0F, 0.0F, 7.0F, 0.0F, false);
+        tail.setTextureOffset(0, 0).addBox(-4.0F, 0.0F, 0.5F, 5.0F, 0.0F, 7.0F, 0.0F, false);
     }
 
     @Override
@@ -42,7 +43,7 @@ public class TadpoleModel<T extends Entity> extends SegmentedModel<T>  {
             f1 = 1.7F;
         }
 
-        this.tail.rotateAngleX = -f * 0.25F * MathHelper.sin(f1 * 0.6F * ageInTicks);
+        this.tail.rotateAngleX = -f * 0.25F * MathHelper.sin(f1 * 0.4F * ageInTicks);
     }
 
     @Override

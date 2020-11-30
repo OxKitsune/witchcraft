@@ -18,6 +18,8 @@ public class TadpoleRenderer extends MobRenderer<TadpoleEntity, TadpoleModel<Tad
         super(renderManagerIn, new TadpoleModel<>(), 0.4f);
     }
 
+
+
     @Override
     protected void applyRotations(TadpoleEntity entityLiving, MatrixStack matrixStackIn, float ageInTicks, float rotationYaw, float partialTicks) {
         super.applyRotations(entityLiving, matrixStackIn, ageInTicks, rotationYaw, partialTicks);

@@ -62,7 +62,6 @@ public class WitchcraftMod
 
         LOGGER.info("Registering entity attributes...");
         DeferredWorkQueue.runLater(() -> {
-
             GlobalEntityTypeAttributes.put(WitchcraftEntityTypes.TADPOLE_ENTITY.get(), TadpoleEntity.setCustomAttributes().create());
         });
 
